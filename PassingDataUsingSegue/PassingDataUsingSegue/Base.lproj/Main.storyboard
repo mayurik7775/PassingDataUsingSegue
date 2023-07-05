@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UeW-gI-3TR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PassingDataUsingSegue" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name ...." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sTt-sX-biq">
+                                <rect key="frame" x="20" y="138" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZbH-wV-z6W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email ...." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OBc-hr-zrx">
+                                <rect key="frame" x="20" y="213" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="DdV-yI-Tow"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uz-CX-uDJ">
+                                <rect key="frame" x="20" y="383" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="9Gy-p2-TcZ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Submit">
+                                            <attributes>
+                                                <font key="NSFont" size="30" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="Submibtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kxm-P3-HbX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="OBc-hr-zrx" firstAttribute="leading" secondItem="sTt-sX-biq" secondAttribute="leading" id="5e0-6g-nr5"/>
+                            <constraint firstItem="OBc-hr-zrx" firstAttribute="trailing" secondItem="sTt-sX-biq" secondAttribute="trailing" id="BJg-vA-cuQ"/>
+                            <constraint firstItem="sTt-sX-biq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="FGd-oz-7yi"/>
+                            <constraint firstItem="2uz-CX-uDJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Jmy-qC-DHG"/>
+                            <constraint firstItem="2uz-CX-uDJ" firstAttribute="top" secondItem="OBc-hr-zrx" secondAttribute="bottom" constant="120" id="SQi-I5-9u2"/>
+                            <constraint firstItem="sTt-sX-biq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bai-Ef-1UN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2uz-CX-uDJ" secondAttribute="trailing" constant="20" id="iBb-NK-kTl"/>
+                            <constraint firstItem="OBc-hr-zrx" firstAttribute="top" secondItem="sTt-sX-biq" secondAttribute="bottom" constant="25" id="ohx-wf-Wia"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sTt-sX-biq" secondAttribute="trailing" constant="20" id="rwq-vf-OJB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0H2-v3-wj6"/>
+                    <connections>
+                        <outlet property="txtEmail" destination="OBc-hr-zrx" id="r7K-px-pJZ"/>
+                        <outlet property="txtname" destination="sTt-sX-biq" id="QDh-gh-AuC"/>
+                        <segue destination="Xli-Ms-heF" kind="show" identifier="VC2" id="4oH-UW-PY9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="35"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="Ojc-cV-Z0i">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="Xli-Ms-heF" customClass="SecondViewController" customModule="PassingDataUsingSegue" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ls8-j0-DfC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nq2-Z3-tAW">
+                                <rect key="frame" x="20" y="208" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="iju-0e-VXr"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Name :">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="28" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lH-R2-NFQ">
+                                <rect key="frame" x="20" y="307" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2Jd-kg-Fdw"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Email : ">
+                                        <attributes>
+                                            <font key="NSFont" size="28" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mbs-5c-0bd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nq2-Z3-tAW" firstAttribute="top" secondItem="mbs-5c-0bd" secondAttribute="top" constant="120" id="IZz-Jk-8xq"/>
+                            <constraint firstItem="nq2-Z3-tAW" firstAttribute="leading" secondItem="mbs-5c-0bd" secondAttribute="leading" constant="20" id="XN9-eT-D5u"/>
+                            <constraint firstItem="9lH-R2-NFQ" firstAttribute="top" secondItem="nq2-Z3-tAW" secondAttribute="bottom" constant="49" id="hE1-8M-fpL"/>
+                            <constraint firstItem="9lH-R2-NFQ" firstAttribute="trailing" secondItem="nq2-Z3-tAW" secondAttribute="trailing" id="mUf-va-LY3"/>
+                            <constraint firstItem="9lH-R2-NFQ" firstAttribute="leading" secondItem="nq2-Z3-tAW" secondAttribute="leading" id="nyD-px-lAm"/>
+                            <constraint firstItem="mbs-5c-0bd" firstAttribute="trailing" secondItem="nq2-Z3-tAW" secondAttribute="trailing" constant="20" id="prT-cf-ing"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2hM-WM-w1R"/>
+                    <connections>
+                        <outlet property="emaillbl" destination="9lH-R2-NFQ" id="ppi-BP-K7W"/>
+                        <outlet property="namelbl" destination="nq2-Z3-tAW" id="XTN-Sn-tHE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KaM-TO-7mP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1445" y="35"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Aqq-Wn-7Rf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UeW-gI-3TR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="H3g-lt-zh6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9XR-vO-9zC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gpn-7K-EYz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-57" y="35"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
